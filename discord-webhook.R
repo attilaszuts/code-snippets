@@ -11,11 +11,11 @@ send_message <- function(webhookurl, my_text) {
 }
 
 # read in credentials
-creds <- read.delim('/mnt/DATA/Projects/BA-20-21/danalysis-3/data/creds.txt', sep = ',')
+creds <- read.delim('/mnt/DATA/Projects/BA-20-21/danalysis-3/data/creds.txt', sep = ',') # change the path to your creds.txt file
 webhookurl <- as.character(creds[creds$key == 'webhookurl', 2])
-ati <- as.character(creds[creds$key == 'ati', 2])
+user <- as.character(creds[creds$key == 'user', 2])
 
-my_text <- paste0('hello ', ati, ' your model has finished training')
+my_text <- paste0('hello ', user, ' your model has finished training')
 
 send_message(webhookurl, my_text)
 
