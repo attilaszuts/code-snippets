@@ -17,5 +17,5 @@ user <- as.character(creds[creds$key == 'user', 2])
 
 my_text <- paste0('hello ', user, ' your model has finished training')
 
-send_message(webhookurl, my_text)
+# send_message(webhookurl, my_text)
 
